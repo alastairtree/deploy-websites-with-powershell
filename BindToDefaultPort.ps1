@@ -20,8 +20,8 @@ $backup = Backup-WebConfiguration $backupName
 
 try { 
    
-	"Adding host header '$hostHeader' binding on port 80 for site $siteName"
-	New-WebBinding -Protocol http -Port 80 -HostHeader $hostHeader -Name $siteName
+	"Adding host header '$hostHeader' binding on port $port for site $siteName"
+	New-WebBinding -Protocol http -Port $port -HostHeader $hostHeader -Name $siteName
 
 } catch {
     "Error detected, running command 'Restore-WebConfiguration $backupName' to restore the web server to its initial state. Please wait..."
