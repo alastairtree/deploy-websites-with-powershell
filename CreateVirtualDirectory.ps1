@@ -33,7 +33,7 @@ try {
     if($user -ne $null) {
         "Setting virtual directory Connect-As credentials to user $user"
         ## Change 'Connect As' settings (New-WebVirtualDirectory don't include Username and Password)
-        Set-ItemProperty $virtualDirectoryPath -Name username -Value $user
+        Set-ItemProperty $virtualDirectoryPath -Name userName -Value $user
         Set-ItemProperty $virtualDirectoryPath -Name password -Value $password
     }
 
